@@ -8,7 +8,7 @@ import (
 	"path"
 	"time"
 
-	"github.com/sarpt/DiscordAuth/pkg/oauth"
+	"github.com/sarpt/discord-token/pkg/oauth"
 	"golang.org/x/oauth2"
 )
 

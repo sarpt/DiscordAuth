@@ -4,7 +4,7 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/sarpt/DiscordAuth/pkg/discordtoken"
+	"github.com/sarpt/discord-token/pkg/discordtoken"
 )
 
 var clientID *string
