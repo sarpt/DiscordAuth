@@ -1,4 +1,4 @@
-package discordauth
+package oauth
 
 import (
 	"context"
@@ -10,9 +10,6 @@ import (
 
 	"golang.org/x/oauth2"
 )
-
-const authURL string = "https://discordapp.com/api/oauth2/authorize"
-const tokenURL string = "https://discordapp.com/api/oauth2/token"
 
 // Notifier provides channels that inform about either code or errors
 type Notifier struct {
@@ -27,7 +24,7 @@ type Authorization struct {
 }
 
 // GetAuthConfig returns the url for which to redirect user to insert credientials
-func GetAuthConfig(clientID string, clientSecret string, scopes []string, redirect url.URL) (oauth2.Config, string) {
+func GetAuthConfig(clientID string, clientSecret string, scopes []string, redirect url.URL, authURL string, tokenURL string) (oauth2.Config, string) {
 	state := strconv.FormatInt(time.Now().Unix(), 10)
 
 	endpoint := oauth2.Endpoint{

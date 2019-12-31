@@ -1,2 +1,2 @@
-# DiscordAuth
-Experiments with implementing Discord Authorization using OAuth2 lib for go
+# Discord Token
+Discord Oauth2 token saving lib/cmd
